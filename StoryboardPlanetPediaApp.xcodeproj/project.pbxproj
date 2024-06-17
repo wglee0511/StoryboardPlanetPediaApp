@@ -13,6 +13,7 @@
 		E495C1A62C20AA8F0054D676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E495C1A42C20AA8F0054D676 /* Main.storyboard */; };
 		E495C1A82C20AA900054D676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E495C1A72C20AA900054D676 /* Assets.xcassets */; };
 		E495C1AB2C20AA900054D676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E495C1A92C20AA900054D676 /* LaunchScreen.storyboard */; };
+		E495C1B52C20ABD60054D676 /* planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C1B42C20ABD60054D676 /* planet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E495C1AA2C20AA900054D676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E495C1AC2C20AA900054D676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E495C1B22C20AAD60054D676 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E495C1B42C20ABD60054D676 /* planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		E495C19D2C20AA8F0054D676 /* StoryboardPlanetPediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				E495C1B32C20ABC10054D676 /* model */,
 				E495C19E2C20AA8F0054D676 /* AppDelegate.swift */,
 				E495C1A02C20AA8F0054D676 /* SceneDelegate.swift */,
 				E495C1A22C20AA8F0054D676 /* ViewController.swift */,
@@ -67,6 +70,14 @@
 				E495C1AC2C20AA900054D676 /* Info.plist */,
 			);
 			path = StoryboardPlanetPediaApp;
+			sourceTree = "<group>";
+		};
+		E495C1B32C20ABC10054D676 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E495C1B42C20ABD60054D676 /* planet.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 				E495C1A32C20AA8F0054D676 /* ViewController.swift in Sources */,
 				E495C19F2C20AA8F0054D676 /* AppDelegate.swift in Sources */,
 				E495C1A12C20AA8F0054D676 /* SceneDelegate.swift in Sources */,
+				E495C1B52C20ABD60054D676 /* planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
