@@ -78,6 +78,21 @@ class PlanetDetailViewController: UIViewController {
     
     }
     
+    func adjustContentInset () {
+        let indexPath = IndexPath(item: 0, section: 0)
+        
+        if let cell = planetDetailCollectionView.cellForItem(at: indexPath) {
+            let topInset = planetDetailCollectionView.frame.height - cell.frame.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom - 20
+            
+            planetDetailCollectionView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
+            planetDetailCollectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        adjustContentInset()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         planetImageView.image = UIImage(named: planet.englishName.lowercased())
