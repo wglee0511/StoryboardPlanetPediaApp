@@ -20,13 +20,53 @@ class PlanetDetailViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("에러")
     }
-
+    
     @IBOutlet weak var planetImageView: UIImageView!
+    
+    func setLayout () {
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
+            switch sectionIndex {
+            case 1:
+                var size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .estimated(130))
+                var item = NSCollectionLayoutItem(layoutSize: size)
+                
+                size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(130))
+                
+                var group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
+                group.interItemSpacing  = NSCollectionLayoutSpacing.flexible(20)
+                
+                size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(130))
+            
+                item = NSCollectionLayoutItem(layoutSize: size)
+                group = NSCollectionLayoutGroup.vertical(layoutSize: size, subitems: [group, item])
+                group.interItemSpacing  = NSCollectionLayoutSpacing.fixed(20)
+                
+                
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+                section.interGroupSpacing = 10
+                return section
+                
+            default:
+                let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(200))
+                
+                let item = NSCollectionLayoutItem(layoutSize: size)
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: size, subitems: [item])
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+                section.interGroupSpacing = 20
+                return section
+            }
+        }
+        
+        planetDetailCollectionView.collectionViewLayout = layout
+    
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            planetImageView.image = UIImage(named: planet.englishName.lowercased())
-
+        planetImageView.image = UIImage(named: planet.englishName.lowercased())
+        setLayout()
     }
 }
 
@@ -61,6 +101,7 @@ extension PlanetDetailViewController: UICollectionViewDataSource {
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PlanetInfoCollectionViewCell.self), for: indexPath) as! PlanetInfoCollectionViewCell
             
+            cell.planetIcon.image = UIImage(named: "\(planet.englishName.lowercased())-icon")
             cell.titleLabel.text = "거리"
             cell.valueLabel.text = "1만"
             cell.unitLabel.text = "Km"
@@ -72,7 +113,7 @@ extension PlanetDetailViewController: UICollectionViewDataSource {
             let target = planet.satellites[indexPath.item]
             cell.setelliteName.text = target.koreanName
             cell.setelliteSummary.text = target.summary
-                return cell
+            return cell
         }
     }
     
