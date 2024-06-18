@@ -15,6 +15,7 @@
 		E495C1AB2C20AA900054D676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E495C1A92C20AA900054D676 /* LaunchScreen.storyboard */; };
 		E495C1B52C20ABD60054D676 /* planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C1B42C20ABD60054D676 /* planet.swift */; };
 		E495C1B82C21302D0054D676 /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C1B72C21302D0054D676 /* PlanetCollectionViewCell.swift */; };
+		E495C1BB2C21A13F0054D676 /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C1BA2C21A13F0054D676 /* PlanetDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E495C1B22C20AAD60054D676 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E495C1B42C20ABD60054D676 /* planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planet.swift; sourceTree = "<group>"; };
 		E495C1B72C21302D0054D676 /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
+		E495C1BA2C21A13F0054D676 /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +64,11 @@
 		E495C19D2C20AA8F0054D676 /* StoryboardPlanetPediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				E495C1B92C21A1110054D676 /* views */,
 				E495C1B62C21300A0054D676 /* components */,
 				E495C1B32C20ABC10054D676 /* model */,
 				E495C19E2C20AA8F0054D676 /* AppDelegate.swift */,
 				E495C1A02C20AA8F0054D676 /* SceneDelegate.swift */,
-				E495C1A22C20AA8F0054D676 /* MainViewController.swift */,
 				E495C1A42C20AA8F0054D676 /* Main.storyboard */,
 				E495C1A72C20AA900054D676 /* Assets.xcassets */,
 				E495C1A92C20AA900054D676 /* LaunchScreen.storyboard */,
@@ -89,6 +91,15 @@
 				E495C1B72C21302D0054D676 /* PlanetCollectionViewCell.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		E495C1B92C21A1110054D676 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E495C1A22C20AA8F0054D676 /* MainViewController.swift */,
+				E495C1BA2C21A13F0054D676 /* PlanetDetailViewController.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 				E495C19F2C20AA8F0054D676 /* AppDelegate.swift in Sources */,
 				E495C1B82C21302D0054D676 /* PlanetCollectionViewCell.swift in Sources */,
 				E495C1A12C20AA8F0054D676 /* SceneDelegate.swift in Sources */,
+				E495C1BB2C21A13F0054D676 /* PlanetDetailViewController.swift in Sources */,
 				E495C1B52C20ABD60054D676 /* planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

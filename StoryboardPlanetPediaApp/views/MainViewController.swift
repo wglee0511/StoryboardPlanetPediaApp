@@ -11,6 +11,16 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var planetCollectionView: UICollectionView!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UICollectionViewCell, let indexPath = planetCollectionView.indexPath(for: cell) {
+            let targetPlanet = solarSystemPlanets[indexPath.row]
+            
+            if let targetViewController = segue.destination as? PlanetDetailViewController {
+                targetViewController.planet = targetPlanet
+            }
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

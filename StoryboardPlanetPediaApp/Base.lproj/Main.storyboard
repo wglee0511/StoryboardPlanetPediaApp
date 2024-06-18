@@ -58,6 +58,7 @@
                                         <connections>
                                             <outlet property="planetImageView" destination="sof-Mp-HPX" id="6RN-wS-ExZ"/>
                                             <outlet property="planetNameLabel" destination="hH5-lI-otX" id="Yxb-ri-uKI"/>
+                                            <segue destination="GoH-ZB-MBT" kind="show" id="2bM-bT-Hw7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -85,6 +86,36 @@
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
         </scene>
+        <!--Planet Detail View Controller-->
+        <scene sceneID="Lnf-0n-RKO">
+            <objects>
+                <viewController id="GoH-ZB-MBT" customClass="PlanetDetailViewController" customModule="StoryboardPlanetPediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bmm-Iw-rhz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uranus" translatesAutoresizingMaskIntoConstraints="NO" id="bYq-QO-YMv">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a82-W6-TYW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bYq-QO-YMv" firstAttribute="trailing" secondItem="a82-W6-TYW" secondAttribute="trailing" id="01o-y9-pj3"/>
+                            <constraint firstItem="bYq-QO-YMv" firstAttribute="leading" secondItem="a82-W6-TYW" secondAttribute="leading" id="2VE-5V-yom"/>
+                            <constraint firstAttribute="bottom" secondItem="bYq-QO-YMv" secondAttribute="bottom" id="Izs-Ud-SdT"/>
+                            <constraint firstItem="bYq-QO-YMv" firstAttribute="top" secondItem="bmm-Iw-rhz" secondAttribute="top" id="fLj-dp-RgP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oHl-Sb-BRF"/>
+                    <connections>
+                        <outlet property="planetImageView" destination="bYq-QO-YMv" id="LYf-PI-lJi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IEQ-AV-QXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988.5496183206105" y="3.5211267605633805"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="O8a-3m-G4r">
             <objects>
@@ -106,6 +137,7 @@
     </scenes>
     <resources>
         <image name="earth-icon" width="256" height="256"/>
+        <image name="uranus" width="960" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
