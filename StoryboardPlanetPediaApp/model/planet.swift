@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+fileprivate let numberFormmatter = NumberFormatter()
+
 struct Planet {
     struct Satellite {
         let koreanName: String
@@ -20,8 +22,33 @@ struct Planet {
     let koreanName: String
     let englishName: String
     let size: Double // 지름 기준 (km)
+    var sizeString: String? {
+        numberFormmatter.numberStyle = .decimal
+        numberFormmatter.minimumFractionDigits = 0
+        numberFormmatter.maximumFractionDigits = 1
+        
+        return numberFormmatter.string(for: size)
+    }
     let orbitalPeriod: Double
+    var isYear: Bool {
+        return self.orbitalPeriod > 365
+    }
+    var orbitalPeriodString: String? {
+        let value = self.isYear ? self.orbitalPeriod / 365 : self.orbitalPeriod
+        numberFormmatter.numberStyle = .decimal
+        numberFormmatter.minimumFractionDigits = 0
+        numberFormmatter.maximumFractionDigits = 2
+        
+        return numberFormmatter.string(for: value)
+    }
     let distanceFromEarthKM: Double // km 기준
+    var distanceString: String? {
+        numberFormmatter.numberStyle = .decimal
+        numberFormmatter.minimumFractionDigits = 0
+        numberFormmatter.maximumFractionDigits = 2
+        
+        return numberFormmatter.string(for: distanceFromEarthKM)
+    }
     let description: String
     let satellites: [Satellite]
 }
