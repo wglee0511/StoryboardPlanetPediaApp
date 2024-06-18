@@ -11,17 +11,27 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var planetCollectionView: UICollectionView!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let cell = sender as? UICollectionViewCell, let indexPath = planetCollectionView.indexPath(for: cell) {
-            let targetPlanet = solarSystemPlanets[indexPath.row]
-            
-            if let targetViewController = segue.destination as? PlanetDetailViewController {
-                targetViewController.planet = targetPlanet
-            }
+    @IBSegueAction func planetDetailSegue(_ coder: NSCoder, sender: Any?) -> PlanetDetailViewController? {
+        
+        guard let cell = sender as? PlanetCollectionViewCell, let indexPath = planetCollectionView.indexPath(for: cell) else {
+            return nil
         }
+        
+        let targetPlanet = solarSystemPlanets[indexPath.item]
+        
+        return PlanetDetailViewController(planet: targetPlanet, coder: coder)
     }
     
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let cell = sender as? UICollectionViewCell, let indexPath = planetCollectionView.indexPath(for: cell) {
+//            let targetPlanet = solarSystemPlanets[indexPath.row]
+//            
+//            if let targetViewController = segue.destination as? PlanetDetailViewController {
+//                targetViewController.planet = targetPlanet
+//            }
+//        }
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

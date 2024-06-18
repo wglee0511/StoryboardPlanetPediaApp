@@ -58,7 +58,7 @@
                                         <connections>
                                             <outlet property="planetImageView" destination="sof-Mp-HPX" id="6RN-wS-ExZ"/>
                                             <outlet property="planetNameLabel" destination="hH5-lI-otX" id="Yxb-ri-uKI"/>
-                                            <segue destination="GoH-ZB-MBT" kind="show" id="2bM-bT-Hw7"/>
+                                            <segue destination="GoH-ZB-MBT" kind="show" destinationCreationSelector="planetDetailSegue:sender:" id="2bM-bT-Hw7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
