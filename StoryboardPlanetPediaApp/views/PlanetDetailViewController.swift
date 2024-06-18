@@ -93,7 +93,10 @@ class PlanetDetailViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        adjustContentInset()
+        
+        DispatchQueue.main.async {
+            self.adjustContentInset()
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -175,6 +178,6 @@ extension PlanetDetailViewController: UICollectionViewDelegate {
         let offsetY = abs(scrollView.contentOffset.y)
         let y = abs(contentSize - (offsetY + view.safeAreaInsets.top + view.safeAreaInsets.bottom + 20))
         let alpha = y / contentSize
-        dimmingView.alpha = alpha < 0.4 ? alpha : 0. 4
+        dimmingView.alpha = alpha < 0.4 ? alpha : 0.4
     }
 }
