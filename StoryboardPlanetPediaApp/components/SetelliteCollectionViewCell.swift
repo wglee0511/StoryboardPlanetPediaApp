@@ -7,8 +7,9 @@
 
 import UIKit
 
-class SetelliteCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var setelliteName: UILabel!
+class SetelliteCollectionViewCell: RoundedCollectionViewCell {
     
+    @IBOutlet weak var setelliteName: UILabel!
     @IBOutlet weak var setelliteSummary: UILabel!
+    
 }
