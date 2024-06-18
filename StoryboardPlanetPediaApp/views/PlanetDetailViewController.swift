@@ -45,8 +45,22 @@ class PlanetDetailViewController: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
                 section.interGroupSpacing = 10
-                return section
                 
+                return section
+            case 2:
+                var size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(200))
+                
+                let item = NSCollectionLayoutItem(layoutSize: size)
+                
+                size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.6), heightDimension: .estimated(200))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
+                
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+                section.interGroupSpacing = 20
+                section.orthogonalScrollingBehavior = .continuous
+                
+                return section
             default:
                 let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(200))
                 
@@ -55,6 +69,7 @@ class PlanetDetailViewController: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
                 section.interGroupSpacing = 20
+                
                 return section
             }
         }
@@ -123,6 +138,7 @@ extension PlanetDetailViewController: UICollectionViewDataSource {
             }
             
             return cell
+            
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: SetelliteCollectionViewCell.self), for: indexPath) as! SetelliteCollectionViewCell
             
