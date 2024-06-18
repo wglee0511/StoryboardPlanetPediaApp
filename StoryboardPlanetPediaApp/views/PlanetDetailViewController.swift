@@ -9,6 +9,8 @@ import UIKit
 
 class PlanetDetailViewController: UIViewController {
     
+    
+    @IBOutlet weak var dimmingView: UIView!
     @IBOutlet weak var planetDetailCollectionView: UICollectionView!
     private let planet: Planet
     
@@ -165,4 +167,14 @@ extension PlanetDetailViewController: UICollectionViewDataSource {
     }
     
     
+}
+
+extension PlanetDetailViewController: UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentSize = scrollView.contentSize.height
+        let offsetY = abs(scrollView.contentOffset.y)
+        let y = abs(contentSize - (offsetY + view.safeAreaInsets.top + view.safeAreaInsets.bottom + 20))
+        let alpha = y / contentSize
+        dimmingView.alpha = alpha < 0.4 ? alpha : 0. 4
+    }
 }

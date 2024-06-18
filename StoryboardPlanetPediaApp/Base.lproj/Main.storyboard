@@ -308,7 +308,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="oHl-Sb-BRF"/>
                     <connections>
-                        <outlet property="planetDetailCollectionView" destination="5xc-EK-pwk" id="Wnf-Nv-u9W"/>
+                        <outlet property="dimmingView" destination="qUw-Bn-K44" id="Tlb-3h-6Qa"/>
+                        <outlet property="planetDetailCollectionView" destination="5xc-EK-pwk" id="PHO-Aw-oKt"/>
                         <outlet property="planetImageView" destination="bYq-QO-YMv" id="LYf-PI-lJi"/>
                     </connections>
                 </viewController>
