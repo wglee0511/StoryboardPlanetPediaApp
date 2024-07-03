@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
         let location = sender.location(in: mapView)
         let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
         
-        print("Tapped at coordinate: \(coordinate.latitude), \(coordinate.longitude)")
+        print("Tapped a₩ t coordinate: \(coordinate.latitude), \(coordinate.longitude)")
         
         // 핀 추가
         let annotation = MKPointAnnotation()
@@ -46,7 +46,7 @@ class MapViewController: UIViewController {
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     gue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
      }

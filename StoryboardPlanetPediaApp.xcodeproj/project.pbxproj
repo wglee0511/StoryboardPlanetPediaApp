@@ -12,6 +12,8 @@
 		E40A5ECD2C21C5A700A71B28 /* SetelliteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5ECC2C21C5A700A71B28 /* SetelliteCollectionViewCell.swift */; };
 		E40A5ECF2C21E1C400A71B28 /* RoundedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5ECE2C21E1C400A71B28 /* RoundedCollectionViewCell.swift */; };
 		E411C3862C22E32600C0B7F8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411C3852C22E32600C0B7F8 /* MapViewController.swift */; };
+		E46EB3F02C352FD5006183D6 /* CustomOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46EB3EF2C352FD5006183D6 /* CustomOperation.swift */; };
+		E46EB3F22C35314D006183D6 /* QueueTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46EB3F12C35314D006183D6 /* QueueTestViewController.swift */; };
 		E495C19F2C20AA8F0054D676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C19E2C20AA8F0054D676 /* AppDelegate.swift */; };
 		E495C1A12C20AA8F0054D676 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C1A02C20AA8F0054D676 /* SceneDelegate.swift */; };
 		E495C1A32C20AA8F0054D676 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C1A22C20AA8F0054D676 /* MainViewController.swift */; };
@@ -29,6 +31,8 @@
 		E40A5ECC2C21C5A700A71B28 /* SetelliteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetelliteCollectionViewCell.swift; sourceTree = "<group>"; };
 		E40A5ECE2C21E1C400A71B28 /* RoundedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCollectionViewCell.swift; sourceTree = "<group>"; };
 		E411C3852C22E32600C0B7F8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E46EB3EF2C352FD5006183D6 /* CustomOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperation.swift; sourceTree = "<group>"; };
+		E46EB3F12C35314D006183D6 /* QueueTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTestViewController.swift; sourceTree = "<group>"; };
 		E495C19B2C20AA8F0054D676 /* StoryboardPlanetPediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardPlanetPediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E495C19E2C20AA8F0054D676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E495C1A02C20AA8F0054D676 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E46EB3EE2C352FBC006183D6 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				E46EB3EF2C352FD5006183D6 /* CustomOperation.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		E495C1922C20AA8F0054D676 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +86,7 @@
 		E495C19D2C20AA8F0054D676 /* StoryboardPlanetPediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				E46EB3EE2C352FBC006183D6 /* lib */,
 				E495C1B92C21A1110054D676 /* views */,
 				E495C1B62C21300A0054D676 /* components */,
 				E495C1B32C20ABC10054D676 /* model */,
@@ -113,6 +126,7 @@
 				E495C1A22C20AA8F0054D676 /* MainViewController.swift */,
 				E495C1BA2C21A13F0054D676 /* PlanetDetailViewController.swift */,
 				E411C3852C22E32600C0B7F8 /* MapViewController.swift */,
+				E46EB3F12C35314D006183D6 /* QueueTestViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -188,8 +202,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46EB3F02C352FD5006183D6 /* CustomOperation.swift in Sources */,
 				E411C3862C22E32600C0B7F8 /* MapViewController.swift in Sources */,
 				E495C1A32C20AA8F0054D676 /* MainViewController.swift in Sources */,
+				E46EB3F22C35314D006183D6 /* QueueTestViewController.swift in Sources */,
 				E495C19F2C20AA8F0054D676 /* AppDelegate.swift in Sources */,
 				E40A5ECF2C21E1C400A71B28 /* RoundedCollectionViewCell.swift in Sources */,
 				E40A5EC92C21BEED00A71B28 /* PlanetDetailCollectionViewCell.swift in Sources */,
