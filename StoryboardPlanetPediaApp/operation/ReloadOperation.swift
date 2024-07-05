@@ -13,7 +13,7 @@ class ReloadOperation: Operation {
     var indexPath: IndexPath?
     
     
-    init(collectionView: UICollectionView, indexPath: IndexPath?) {
+    init(collectionView: UICollectionView, indexPath: IndexPath? = nil) {
         self.collectionView = collectionView
         self.indexPath = indexPath
         

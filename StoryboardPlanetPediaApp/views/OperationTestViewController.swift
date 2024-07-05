@@ -11,7 +11,44 @@ class OperationTestViewController: UIViewController {
     
     @IBOutlet weak var operationTestCollectionView: UICollectionView!
     
+    let backgroundQueue = OperationQueue()
+    let mainQueue = OperationQueue.main
+    
     let dataSource = PhotoDataSource()
+    
+    @IBAction func onPressCancelOperation(_ sender: Any) {
+        backgroundQueue.cancelAllOperations()
+        mainQueue.cancelAllOperations()
+    }
+    
+    @IBAction func onPressStartOperation(_ sender: Any) {
+        var uiOperations = [Operation]()
+        var backgroundOperations = [Operation]()
+        
+        let reloadOperation = ReloadOperation(collectionView: operationTestCollectionView)
+        
+        uiOperations.append(reloadOperation)
+        
+        for index in 0 ... (dataSource.list.count - 1) {
+            let data = dataSource.list[index]
+            let downloadOperation = DownloadOperation(target: data)
+            
+            reloadOperation.addDependency(downloadOperation)
+            backgroundOperations.append(downloadOperation)
+            
+            let filterOperation = FilterOperation(target: data)
+            filterOperation.addDependency(reloadOperation)
+            backgroundOperations.append(filterOperation)
+            
+            let reloadCellOperation = ReloadOperation(collectionView: operationTestCollectionView, indexPath: IndexPath(item: index, section: 0))
+            reloadCellOperation.addDependency(filterOperation)
+            uiOperations.append(reloadCellOperation)
+        }
+        
+        backgroundQueue.addOperations(backgroundOperations, waitUntilFinished: false)
+        mainQueue.addOperations(uiOperations, waitUntilFinished: false)
+        
+    }
     
     func setLayout () {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in

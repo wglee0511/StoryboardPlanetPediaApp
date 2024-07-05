@@ -469,7 +469,18 @@
                             <constraint firstItem="T8F-ou-AKa" firstAttribute="leading" secondItem="cFr-jU-vCP" secondAttribute="leading" id="OEs-WX-2Zv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Operation Test" id="Pcy-3Q-gxv"/>
+                    <navigationItem key="navigationItem" title="Operation Test" id="Pcy-3Q-gxv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hyn-TN-mc7">
+                            <connections>
+                                <action selector="onPressCancelOperation:" destination="R6I-Ye-7pa" id="iFx-yU-8Di"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="F2H-5d-ylH">
+                            <connections>
+                                <action selector="onPressStartOperation:" destination="R6I-Ye-7pa" id="QHf-Gg-dTV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="operationTestCollectionView" destination="T8F-ou-AKa" id="TPs-ci-tdD"/>
                     </connections>
