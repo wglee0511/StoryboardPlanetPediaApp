@@ -23,6 +23,10 @@
 		E495C1B52C20ABD60054D676 /* planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C1B42C20ABD60054D676 /* planet.swift */; };
 		E495C1B82C21302D0054D676 /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C1B72C21302D0054D676 /* PlanetCollectionViewCell.swift */; };
 		E495C1BB2C21A13F0054D676 /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495C1BA2C21A13F0054D676 /* PlanetDetailViewController.swift */; };
+		E4BBD8032C37C5F500AAF80E /* OperationTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBD8022C37C5F500AAF80E /* OperationTestViewController.swift */; };
+		E4BBD8052C37C77C00AAF80E /* OperationTestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBD8042C37C77C00AAF80E /* OperationTestCollectionViewCell.swift */; };
+		E4BBD8072C37C8BD00AAF80E /* photoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBD8062C37C8BD00AAF80E /* photoData.swift */; };
+		E4BBD8092C37C96300AAF80E /* photoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBD8082C37C96300AAF80E /* photoDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		E495C1B42C20ABD60054D676 /* planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planet.swift; sourceTree = "<group>"; };
 		E495C1B72C21302D0054D676 /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
 		E495C1BA2C21A13F0054D676 /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
+		E4BBD8022C37C5F500AAF80E /* OperationTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTestViewController.swift; sourceTree = "<group>"; };
+		E4BBD8042C37C77C00AAF80E /* OperationTestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTestCollectionViewCell.swift; sourceTree = "<group>"; };
+		E4BBD8062C37C8BD00AAF80E /* photoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoData.swift; sourceTree = "<group>"; };
+		E4BBD8082C37C96300AAF80E /* photoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				E495C1B42C20ABD60054D676 /* planet.swift */,
+				E4BBD8062C37C8BD00AAF80E /* photoData.swift */,
+				E4BBD8082C37C96300AAF80E /* photoDataSource.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -116,6 +126,7 @@
 				E40A5ECA2C21C2B200A71B28 /* PlanetInfoCollectionViewCell.swift */,
 				E40A5ECC2C21C5A700A71B28 /* SetelliteCollectionViewCell.swift */,
 				E40A5ECE2C21E1C400A71B28 /* RoundedCollectionViewCell.swift */,
+				E4BBD8042C37C77C00AAF80E /* OperationTestCollectionViewCell.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -127,6 +138,7 @@
 				E495C1BA2C21A13F0054D676 /* PlanetDetailViewController.swift */,
 				E411C3852C22E32600C0B7F8 /* MapViewController.swift */,
 				E46EB3F12C35314D006183D6 /* QueueTestViewController.swift */,
+				E4BBD8022C37C5F500AAF80E /* OperationTestViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -203,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E46EB3F02C352FD5006183D6 /* CustomOperation.swift in Sources */,
+				E4BBD8052C37C77C00AAF80E /* OperationTestCollectionViewCell.swift in Sources */,
 				E411C3862C22E32600C0B7F8 /* MapViewController.swift in Sources */,
 				E495C1A32C20AA8F0054D676 /* MainViewController.swift in Sources */,
 				E46EB3F22C35314D006183D6 /* QueueTestViewController.swift in Sources */,
@@ -210,6 +223,9 @@
 				E40A5ECF2C21E1C400A71B28 /* RoundedCollectionViewCell.swift in Sources */,
 				E40A5EC92C21BEED00A71B28 /* PlanetDetailCollectionViewCell.swift in Sources */,
 				E495C1B82C21302D0054D676 /* PlanetCollectionViewCell.swift in Sources */,
+				E4BBD8072C37C8BD00AAF80E /* photoData.swift in Sources */,
+				E4BBD8032C37C5F500AAF80E /* OperationTestViewController.swift in Sources */,
+				E4BBD8092C37C96300AAF80E /* photoDataSource.swift in Sources */,
 				E40A5ECB2C21C2B200A71B28 /* PlanetInfoCollectionViewCell.swift in Sources */,
 				E495C1A12C20AA8F0054D676 /* SceneDelegate.swift in Sources */,
 				E495C1BB2C21A13F0054D676 /* PlanetDetailViewController.swift in Sources */,
