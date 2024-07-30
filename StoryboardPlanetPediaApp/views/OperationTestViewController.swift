@@ -56,17 +56,17 @@ class OperationTestViewController: UIViewController {
             // 한줄에 몇개씩(가로 길이 0.3 배)
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .estimated(100))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
+            
             // 그룹 크기 설정
             let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
             group.interItemSpacing = .flexible(10)
-
+            
             // 섹션 설정
             let section = NSCollectionLayoutSection(group: group)
             section.interGroupSpacing = 10
             section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-             
+            
             return section
         }
         operationTestCollectionView.collectionViewLayout = layout

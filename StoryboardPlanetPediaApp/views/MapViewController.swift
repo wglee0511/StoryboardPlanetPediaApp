@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
         let location = sender.location(in: mapView)
         let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
         
-        print("Tapped a₩ t coordinate: \(coordinate.latitude), \(coordinate.longitude)")
+        print("Tapped at coordinate: \(coordinate.latitude), \(coordinate.longitude)")
         
         // 핀 추가
         let annotation = MKPointAnnotation()
